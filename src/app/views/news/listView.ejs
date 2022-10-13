@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>.containerlist{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .btnsearch{
+        width: 100%;
+        max-width: 600px;
+        padding:17px;
+        font-size: 22px;
+        border-style: none;
+        border:1px solid #474;
+        box-shadow: 3px 3px 5px #aaa; 
+        margin:100px 0 60px 0; 
+    }
+    
+    .table{
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 40px;
+    }
+    table,th , td {
+        border:1px solid #666; 
+        border-collapse: collapse;
+    }
+    th{
+        font-size: 20px;
+        background-color: #333;
+        color:#ddd;
+    }
+    th,td{
+        padding:15px ; 
+        font-size: 20px;
+    }</style>
+</head>
+<body>
+    <div class="containerlist">
+        <input class="btnsearch" type="search" name="" id="" placeholder="Search Name">
+        <table class="table">
+           <thead>
+                <th>Name</th>
+                <th>Telephone</th>
+           </thead>
+           <% for(var i=0; i< news.length ; i++ ){ %>
+                <tr>
+                    <td><%= news[i].nombre %></td>
+                    <td><%= news[i].telefono %></td>
+                </tr> 
+           <% }%>
+        </table>
+    </div>
+
+   <!--  <script src="script.js"></script> -->
+</body>
+</html>
