@@ -9,12 +9,12 @@ module.exports = app=>{
         res.render('news/add.ejs')
     })
     
-    app.get('/Listview',(req,res) =>{
-        conn.query('SELECT * FROM datouser', (err,result) =>{
-            res.render('news/listView.ejs',{
+    app.get('/ListView',(req,res) =>{
+         conn.query('SELECT * FROM datouser', (err,result) =>{
+              res.render('news/listView.ejs',{
                 news: result
-            })
-        });
+            }) 
+        }); 
     })
 
     app.post('/added', (req,res) =>{
