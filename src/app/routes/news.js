@@ -19,7 +19,7 @@ module.exports = app=>{
 
     app.post('/added', (req,res) =>{
        // console.log(req.body); //aqui es donde entra body-parser y obtiene los datos del form por sus atrubutos name  
-       const {nombre,telefono} = req.body; 
+       const {nombre,Telefono} = req.body; 
        conn.query('INSERT INTO datouser SET?',{
         nombre,
         Telefono
