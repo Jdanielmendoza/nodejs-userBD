@@ -22,7 +22,7 @@ module.exports = app=>{
        const {nombre,telefono} = req.body; 
        conn.query('INSERT INTO datouser SET?',{
         nombre,
-        telefono
+        Telefono
        }, (err,result) =>{
         res.redirect('/');
        });
